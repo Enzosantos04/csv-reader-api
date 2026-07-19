@@ -14,14 +14,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CsvProductsImport {
+public class CsvProductsImportService {
 
     private static final int BATCH_SIZE = 500;
 
     private final ProductsRepository repository;
     private final ProductsMapper mapper;
 
-    public CsvProductsImport(ProductsRepository repository, ProductsMapper mapper ) {
+    public CsvProductsImportService(ProductsRepository repository, ProductsMapper mapper ) {
         this.repository = repository;
         this.mapper = mapper;
     }
