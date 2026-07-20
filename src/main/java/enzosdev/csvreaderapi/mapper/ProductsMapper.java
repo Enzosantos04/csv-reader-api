@@ -19,6 +19,7 @@ public class ProductsMapper {
 
     public ProductsResponse toResponse(Products products) {
         ProductsResponse productsResponse = new ProductsResponse();
+        productsResponse.setId(products.getId());
         productsResponse.setName(products.getName());
         productsResponse.setPrice(products.getPrice());
         productsResponse.setQuantityStock(products.getQuantityStock());
