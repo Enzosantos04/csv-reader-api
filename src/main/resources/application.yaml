@@ -2,6 +2,11 @@ spring:
   application:
     name: csv-reader-api
 
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
   datasource:
     url: ${DATABASE_URL}
     username: ${DATABASE_USERNAME}
@@ -15,7 +20,7 @@ spring:
     open-in-view: false
     properties:
       hibernate:
-        jdbc.batch_size: 500
+        jdbc.batch_size: 30000
         order_inserts: true
 
   flyway:
