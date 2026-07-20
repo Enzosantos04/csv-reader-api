@@ -35,6 +35,7 @@ public class CsvClientsImportService {
         try(Reader reader = new InputStreamReader(inputStream)){
             var csvToBean = new CsvToBeanBuilder<ClientsDTO>(reader)
                     .withType(ClientsDTO.class)
+                    .withSeparator(';')
                     .build();
 
             for (ClientsDTO dto : csvToBean){
