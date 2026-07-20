@@ -1,4 +1,7 @@
 package enzosdev.csvreaderapi.repository;
 
-public interface ClientsRepository {
+import enzosdev.csvreaderapi.entity.Clients;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ClientsRepository extends JpaRepository<Clients, Long> {
 }
